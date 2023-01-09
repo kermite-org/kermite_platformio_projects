@@ -1,0 +1,24 @@
+{
+  "version": "0.2",
+  "ignorePaths": [],
+  "dictionaryDefinitions": [],
+  "dictionaries": [],
+  "words": [
+    "kermite",
+    "keycodes",
+    "adafruit",
+    "tinyusb",
+    "keymapping",
+    "bootloader",
+    "remapper",
+    "corelogic",
+    "rehold",
+    "keyindex",
+    "extr",
+    "rawhid",
+    "spiflash",
+    "platformio"
+  ],
+  "ignoreWords": [],
+  "import": []
+}
