@@ -1,0 +1,12 @@
+{
+  "name": "node_hid_testapp",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "node-hid": "^2.1.2"
+  }
+}

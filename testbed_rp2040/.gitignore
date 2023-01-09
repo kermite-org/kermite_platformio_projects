@@ -1,0 +1,5 @@
+.pio/
+.vscode/
+node_modules/
+/lib/KermiteCore_Arduino
+
