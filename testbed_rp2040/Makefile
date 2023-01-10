@@ -14,14 +14,14 @@ debug: flash monitor
 
 # create library symlink for development
 symlink_win_create:
-	cmd /c mklink /d lib\KermiteCore_Arduino ..\..\..\KermiteCore_Arduino
+	cmd /c mklink /d lib\kermite_core_arduino\src ..\..\..\..\KermiteCore_Arduino\src
 
 symlink_win_remove:
-	cmd /c rmdir lib\KermiteCore_Arduino
+	cmd /c rmdir lib\kermite_core_arduino\src
 
 symlink_mac_create:
-	ln -snF ../../KermiteCore_Arduino lib/KermiteCore_Arduino
+	ln -snF ../../../../kermite_core_arduino/src lib/KermiteCore_Arduino/src
 
 symlink_mac_remove:
-	unlink lib/KermiteCore_Arduino
+	unlink lib/kermite_core_arduino/src
 

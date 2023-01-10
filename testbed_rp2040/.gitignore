@@ -1,5 +1,5 @@
 .pio/
 .vscode/
 node_modules/
-/lib/KermiteCore_Arduino
+/lib/kermite_core_arduino/src
 

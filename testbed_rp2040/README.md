@@ -7,7 +7,7 @@ The application is a simple keyboard with one-key and one-LED. It is used to che
 
 ## Setup
 
-The library code is referenced by symlink. It is required to have a symbolic link `./lib/KermiteCore_Arduino` points to `<RepositoryRoot>/../KermiteCore_Arduino`.
+The library code is referenced by symlink. It is required to have a symbolic link `./lib/kermite_core_arduino/src` points to `<RepositoryRoot>/../KermiteCore_Arduino/src`.
 To setup this, run
 ```
   make symlink_win_create
