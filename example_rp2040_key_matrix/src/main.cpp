@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include <KermiteCore.h>
-// Libary keyboard_peripheral_modules is also required to run this example
+// libary keyboard_peripheral_modules is also required
 #include <keyboard_peripheral_modules.h>
 
 // example for a keyboard with key matrix, with board LED control
@@ -16,10 +16,10 @@ BoardLED_NeoPixel boardLED(25, 0x40); // promicro rp2040
 KermiteCore kermite;
 
 // set numColumns, numRows, pinColumns, pinRows according to your board
-const int numColumns = 7;
-const int numRows = 4;
-const int pinColumns[numColumns] = {28, 27, 26, 22, 20, 23, 21};
-const int pinRows[numRows] = {6, 7, 8, 9};
+const int numColumns = 4;
+const int numRows = 3;
+const int pinColumns[numColumns] = {28, 27, 26, 22};
+const int pinRows[numRows] = {6, 7, 8};
 
 KeyMatrix keyMatrix(pinColumns, pinRows, numColumns, numRows);
 

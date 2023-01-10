@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include <KermiteCore.h>
-// Libary keyboard_peripheral_modules is also required to run this example.
+// libary keyboard_peripheral_modules is also required
 #include <keyboard_peripheral_modules.h>
 
 // single-key keyboard example, with board LED control
