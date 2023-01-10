@@ -1,18 +1,18 @@
 #include <Arduino.h>
 #include <KermiteCore.h>
-//Libary keyboard_peripheral_modules is also required to run this example.
+// Libary keyboard_peripheral_modules is also required to run this example.
 #include <keyboard_peripheral_modules.h>
 
-//single-key keyboard example, with board LED control
+// single-key keyboard example, with board LED control
 
-//select an appropriate boardLED initializer for your board
-//BoardLED boardLED(25, 25); //pico
-//BoardLED boardLED(18, 19, 20, true); //tiny2040
-BoardLED_NeoPixel boardLED(17, 0x40); //kb2040
-//BoardLED_NeoPixel boardLED(12, 0x40, 11); //xiao rp2040
-//BoardLED_NeoPixel boardLED(16, 0x40); //rp2040-zero
+// select an appropriate boardLED initializer for your board
+// BoardLED boardLED(25); //pico
+// BoardLED boardLED(18, 19, 20, true); //tiny2040
+BoardLED_NeoPixel boardLED(17, 0x40); // kb2040
+// BoardLED_NeoPixel boardLED(12, 0x40, 11); //xiao rp2040
+// BoardLED_NeoPixel boardLED(16, 0x40); //rp2040-zero
 
-const int pinButton = 6; //set an input pin for your board
+const int pinButton = 6; // set an input pin for your board
 
 KermiteCore kermite;
 
