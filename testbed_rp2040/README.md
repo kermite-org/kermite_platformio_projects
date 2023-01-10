@@ -4,19 +4,6 @@ This project is intended to be used for development and debugging KermiteCore.
 
 The application is a simple keyboard with one-key and one-LED. It is used to check the developing core library works correctly.
 
-## Setup
-
-The library code is referenced by symlink. It is required to have a symbolic link `./lib/kermite_core_arduino/src` points to `<RepositoryRoot>/../KermiteCore_Arduino/src`.
-To setup this, run
-```
-  make symlink_win_create
-```
-for Windows or
-```
-  make symlink_mac_create
-```
-for MacOS.
-
 ## Configurations (`app.cpp`)
 
 In `src/app.cpp`, there is a LED and button configurations part. please change them according to your board.
