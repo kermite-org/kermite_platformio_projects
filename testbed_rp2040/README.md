@@ -1,9 +1,8 @@
-# Testbed project for KermiteCore
+# Testbed project for RP2040 boards
 
 This project is intended to be used for development and debugging KermiteCore.
 
 The application is a simple keyboard with one-key and one-LED. It is used to check the developing core library works correctly.
-
 
 ## Setup
 
@@ -17,20 +16,6 @@ for Windows or
   make symlink_mac_create
 ```
 for MacOS.
-
-
-## Configurations (`platformio.ini`)
-
-There is 2 configuration targets in platformio.ini.
-- `[env:generic]` is used for normal development.
-- `[env:portable_stack]` is a special setting which uses portable version of the hardware dependent modules.
-
-You can select default build target by comment-in the declaration `default_envs=...`.
-```ini
-[platformio]
-default_envs=generic
-;default_envs=portable_stack
-```
 
 ## Configurations (`app.cpp`)
 
@@ -57,3 +42,24 @@ To build and write the firmware to the board, execute
   make flash
 ```
 
+
+## Implementation status
+
+for RP2040
+
+| feature | status |
+|-|-|
+|USB Keyboard| ok |
+|Data Persistence | ok |
+
+There are two usb device implementation. arduino-pico's default usb stack based and Adafruit_TinyUSB based. It is recommended to use Adafruit_TinyUSB based implementation since this is more configurable. To enable this, add the lines below in `platformio.ini`.
+```ini
+  build_flags = -DUSE_TINYUSB -DCFG_TUD_HID=2
+```
+
+## Notes
+In platformio.ini, you can specify the target board.
+
+`board = generic` can be used for any boards.
+
+`board = pico` is not supported. With this configuration, mbed based framework is used instead of arduino-pico.
