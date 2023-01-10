@@ -19,6 +19,7 @@ void appEntry() {
   boardLED.initialize();
   kermite.setKeyboardName("mykeeb");
   kermite.enableDebugLogging();
+  // kermite.setProductionMode();
 
   boardLED.write(0, true);
   kermite.begin();

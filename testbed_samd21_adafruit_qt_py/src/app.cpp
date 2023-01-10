@@ -1,12 +1,9 @@
 #include <Arduino.h>
 #include <KermiteCore.h>
-#include <kpm/BoardLED.h>
+#include <kpm/BoardLED_NeoPixel.h>
 #include <kpm/SimpleButton.h>
-// workaround for LDF
-#include <Adafruit_NeoPixel.h>
-#include <Adafruit_TinyUSB.h>
 
-BoardLED boardLED(13, 12, 11, true);
+static BoardLED_NeoPixel boardLED(11, 0x40);
 static SimpleButton button(6);
 
 static KermiteCore kermite;
@@ -24,6 +21,7 @@ void appEntry() {
   kermite.setFlashSavingWaitTimeSec(20);
   kermite.setKeyboardName("mykeeb");
   kermite.enableDebugLogging();
+  // kermite.setProductionMode();
 
   boardLED.write(0, true);
   kermite.begin();

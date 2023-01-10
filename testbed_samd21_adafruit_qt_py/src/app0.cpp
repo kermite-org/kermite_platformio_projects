@@ -1,10 +1,11 @@
 
 #include <Arduino.h>
-#include <kpm/BoardLED.h>
+#include <kpm/BoardLED_NeoPixel.h>
 #include <kpm/SimpleButton.h>
 
 static void boardLedDev() {
-  BoardLED boardLED(13, 12, 11);
+  BoardLED_NeoPixel boardLED(11, 0x40);
+
   boardLED.initialize();
   while (1) {
     boardLED.toggle(0);
@@ -26,9 +27,7 @@ static void stdOutTest() {
 }
 
 static void gpioTestOutput() {
-  const uint8_t pins[] = {
-    0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-  };
+  const uint8_t pins[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
   const int numPins = sizeof(pins);
 
   for (int i = 0; i < numPins; i++) {
@@ -44,9 +43,9 @@ static void gpioTestOutput() {
 }
 
 void app0Entry() {
-  boardLedDev();
+  // boardLedDev();
   // stdOutTest();
-  // gpioTestOutput();
+  gpioTestOutput();
 
   // todo: test uart, i2c, spi, analog io, etc...
 }
