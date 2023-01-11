@@ -39,7 +39,7 @@ for RP2040
 |USB Keyboard| ok |
 |Data Persistence | ok |
 
-There are two usb device implementation. arduino-pico's default usb stack based and Adafruit_TinyUSB based. It is recommended to use Adafruit_TinyUSB based implementation since this is more configurable. To enable this, add the lines below in `platformio.ini`.
+There are two usb device implementation. arduino-pico's default usb stack based and Adafruit_TinyUSB_Arduino based. It is recommended to use Adafruit_TinyUSB_Arduino based implementation since this is more configurable. To enable this, add the lines below in `platformio.ini`.
 ```ini
   build_flags = -DUSE_TINYUSB -DCFG_TUD_HID=2
 ```

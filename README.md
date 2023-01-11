@@ -2,7 +2,7 @@
 
 A collection of examples and development projects for Kermite keyboard firmware with PlatformIO setup.
 
-## Projects Summary
+## Project Summary
 
 |name | about|
 |---|---|
@@ -13,36 +13,36 @@ A collection of examples and development projects for Kermite keyboard firmware 
 
 ## Project Kind
 
-There are two kind of projects contained in this repository. example projects and testbed projects.
+There are two kind of projects contained in this repository. Example project and testbed project.
 
-### Example projects
+### Example project
 
 The folders starts with `example_` are ready to use example project. You can create your own firmware project based on these setup.
 
-### Testbed development projects
+### Testbed development project
 
 The folders starts with `testbed_` are projects used to develop and debug KermiteCore. These are in experimental states and maybe unstable.
 
-In order to edit library code easily, local KermiteCore repository is referenced by a symbolic link. Check [./testbed_rp2040/README.md](./testbed_rp2040/README.md) out if you want to build them.
+Check the document [./testbed_rp2040/README.md](./testbed_rp2040/README.md) if you want to build them.
 
 ## How to build PlatformIO projects
 
 Here is a brief introduction how to use PlatformIO. 
 
-Although it can be used in command line, it's easier to use VSCode GUI for beginners. If you want to know advanced usage, refer the [official document](https://docs.platformio.org/en/latest/).
+Even though it can be used in command line, it's easier to use VSCode GUI for beginners. If you want to know advanced usage, refer the [official document](https://docs.platformio.org/en/latest/).
 
 ### Steps summary
 
 1. Install VSCode (If you don't have)
 2. Install PlatformIO extension for VSCode.
-3. Open a project folder (witch contains platformio.ini)
-4. Execute Build or Upload in the UI at the bottom bar.
+3. Open a project folder (which contains platformio.ini)
+4. Execute Build and Upload buttons in the bottom bar.
 
 ### Instruction
 
 VSCode is required. Launch it first.
 
-![install platformio](https://i.gyazo.com/ba5a541092dae8f75cb19dab01ec085d.png)
+![](https://i.gyazo.com/5748cd4c7b4cb76d38a751f39c1d9d82.png)
 
 Open Extensions panel and search PlatformIO, then install it.
 
@@ -66,6 +66,6 @@ The port used by a board is automatically detected on uploading.
 
 ![](https://i.gyazo.com/d7ed9504ba6f29a705406df6faa350d5.png)
 
-Upload task executed. Output terminal is open and progress logs are  emitted. Now upload has completed.
+Upload task executed. Output terminal is opened and it shows the progress log. Now upload has completed.
 
 Once a firmware uploaded, next time the board is automatically reset, so you don't have to manually reset the board anymore.
